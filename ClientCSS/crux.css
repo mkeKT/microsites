@@ -49,8 +49,8 @@ div.side .TitanBlock {margin-left:15px;}
 }
 
 @media (min-width:1200px){
-	.Float25 {clear:none; width:22.72%; margin-left:3%;}
-	.Float33 {clear:none; width:31.30%; margin-left:3%;}
+	.Float25 {clear:none; width:22%; margin-left:3%;}
+	.Float33 {clear:none; width:30%; margin-left:3%;}
 	.Float50 {clear:none; width:48.45%; margin-left:3%;}
 	.Float66 {clear:none; width:65.60%; margin-left:3%;}
 	.Float75 {clear:none; width:74.20%; margin-left:3%;}
