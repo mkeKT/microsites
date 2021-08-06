@@ -37,12 +37,12 @@
 }
 /* === SECTION 1 ============================================================================ BLOCK/FREEFORM CLASSES */
 /* Block Classes */
-.StripeDefault, .StripeLight, .StripeMedium, .StripeDark, .CardBackground, .CardTransparent, .FeatureImage, .FeatureText {}
+.StripeDefault, .StripeLight, .StripeMedium, .StripeDark, .StripeBackgdImg, .CardBackground, .CardTransparent, .FeatureImage, .FeatureText, .TabFilter {}
 .Float25, .Float33, .Float50, .Float66, .Float75 {}
 .BoxStyle, .BoxStyle2, .BoxStyle3 {}
 .FeatureOverlayBlue10, .FeatureOverlayBlue20, .FeatureOverlayBlue30, .FeatureOverlayBlue40, .FeatureOverlayBlue50, .FeatureOverlayBlue60, .FeatureOverlayBlue70, .FeatureOverlayBlue80, .FeatureOverlayBlue90 {}
 /* Freeform Classes */
-.FloatLeft, .FloatRight, .Button, .Circles {}
+.FloatLeft, .FloatRight, .Button, .Circles, .StandoutText, .Float25, .Float33, .Float50, .Float66, .Float75, .StandoutText {}
 /* === SECTION 2 ============================================================================ LAYOUT OF CONTAINERS */
 /* GLOBAL */
 .layoutContainer:after {
@@ -409,7 +409,7 @@
   margin-bottom: 25px;
 }
 /* Sticky Header offset for anchor links */
-@media (min-width:1200px) {
+/* @media (min-width:1200px) {
   #headerArea + #contentArea a[name]:before {
     content: "";
     display: block;
@@ -418,7 +418,7 @@
     height: 44px;
     margin: -44px 0 0;
   }
-}
+} */
 .TitanStripe {
   padding: 7rem 0;
   overflow: hidden;
@@ -446,6 +446,13 @@ img.FloatLeft, img.FloatRight {
   display: block;
   margin-bottom: 12px;
 }
+img.Float25 {
+    max-height: 120px;
+    width: auto;
+	clear: left;
+}
+.BoxStyle2 h3 .StandoutText{color: #3de41a;font-size: 4.2rem;margin: 10px 0px;}
+
 @media (min-width:768px) {
   img.FloatLeft {
     float: left;
@@ -693,6 +700,70 @@ div.side nav ul a:before {
   position: relative;
 }
 /* ==== CENTER ZONE */
+	blockquote {
+	font-style: italic;
+		color: #444;
+		 margin: 0;
+    padding: 0 18px;
+    padding: 0 1.125rem;
+}
+blockquote p::after {
+	content: "”";
+	width: 0.5em;
+	margin-right: -0.5em;
+}
+	blockquote p::before, blockquote p::after {
+	position: relative;
+	display: inline-block;
+	top: 0.15em;
+	margin-top: -0.15em;
+	font-size: 1.5em;
+	color: #aaa;
+}
+	blockquote p::before {
+	content: "“";
+	width: 0.85em;
+	padding-right: 0.15em;
+	margin-left: -1em;
+	text-align: right;
+}
+.has-pullquote:before {
+    /* Reset metrics. */
+    padding: 0;
+    border: none;
+    /* Content */
+    content: attr(data-pullquote);
+    /* Pull out to the right, modular scale based margins. */
+    float: right;
+    width: 320px;
+    margin: 12px -140px 24px 36px;
+    /* Baseline correction */
+    position: relative;
+    top: 5px;
+    /* Typography (30px line-height equals 25% incremental leading) */
+    font-size: 23px;
+    line-height: 30px;
+}
+.pullquote-left:before {
+    float: left;
+    margin: 12px 31px 24px -102px;
+    width: 251px;
+}
+.pullquote-adelle:before {
+    font-family: "adelle-1", "adelle-2";
+    font-weight: 100;
+    top: 10px !important;
+}
+.pullquote-helvetica:before {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    top: 7px !important;
+}
+.pullquote-facit:before {
+    font-family: "facitweb-1", "facitweb-2", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    top: 7px !important;
+}
 /* == FOOTER */
 #footerArea .bottomContent p {
   margin: 0;
@@ -1035,3 +1106,45 @@ div.side nav ul a:before {
   margin-top: 20px;
   -webkit-overflow-scrolling: touch;
 }
+	/* Photo Block */
+.PhotoBlock .thumbnails a.fancybox {
+	width: 23%;
+	margin: 1%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 5px #999;
+	border: 2px solid #fff;
+}
+
+.PhotoBlock .thumbnails {
+	width: 100%;
+	float: left;
+}
+.PhotoBlock .thumbnails a.fancybox {
+	width: 23%;
+	margin: 1%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 5px #999;
+	border: 2px solid #fff;
+}
+
+.PhotoBlock .thumbnails a.fancybox img {
+	float: left;
+	transition: all 1s ease 0s;
+	width: 100%;
+}
+	/* Filter Block Class: TabFilter */
+.Aggregation.TabFilter .AggregationFilter2 fieldset {display:flex;flex-direction:column;width:100%;margin-bottom:20px;}
+	.Aggregation.TabFilter .AggregationFilter2 fieldset .head {display:flex;align-items:center;margin-bottom:10px;display:none;}
+	.Aggregation.TabFilter .AggregationFilter2 fieldset .head h4 {width:auto;}
+	.Aggregation.TabFilter .AggregationFilter2 fieldset .head .reset {display:none;width:auto;}
+	.Aggregation.TabFilter .AggregationFilter2 fieldset .head > span:first-of-type {display:none;}
+	.Aggregation.TabFilter .AggregationFilter2 fieldset .inputs {display:flex;flex-wrap:wrap;}
+	.Aggregation.TabFilter .AggregationFilter2 fieldset .inputs > div {border-radius:5px;cursor:pointer;margin-right:10px;margin-bottom:10px;padding:10px;}
+	.Aggregation.TabFilter .AggregationFilter2 fieldset .inputs .uses {display:none;}
+	.Aggregation.TabFilter .filterButton {display:none;}
+	.Aggregation.TabFilter .head h4:first-child {display: none;}
+@media (min-width: 1200px){.Aggregation.TabFilter .AggregationResults {clear: none;float: none !important;width:100% !important;}}
