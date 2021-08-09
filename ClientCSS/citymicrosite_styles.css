@@ -286,7 +286,7 @@ div.side nav a.current {color:#569537;}
 /* ==== CENTER ZONE */
 
 /* == FOOTER */
-#footerArea{background:url(images/Port/Skyline3.png) no-repeat center top;padding-top:185px;}
+#footerArea{background:url("images/cityMicro/Skyline3-Port.png") no-repeat center top;padding-top:185px;}
 #copyRightContainer{background-color:#004664;}
 #footerArea .copyright,
 nav.bottom ul {font-size:1.3rem;font-weight:700;}
@@ -382,6 +382,7 @@ nav.bottom a:focus {color:rgba(255,255,255,1);}
 .StripeDark    .CardBackground .item h4 a:focus {color:rgba(0,0,0,1);}
 .StripeDark    .CardBackground .teaser {color:rgba(126,126,115,1);}
 
+.Aggregation.TabFilter .AggregationFilter2 fieldset .inputs > div,
 .CardTransparent .item .linkText a,
 .CardBackground  .item .linkText a,
 .titanBody .Button a,
@@ -390,6 +391,8 @@ nav.bottom a:focus {color:rgba(255,255,255,1);}
 .CenterZone input[type="button"], 
 .Commenting input[type="button"] {border:1px solid transparent; background:#00577c; border-radius:1px; color:rgba(255,255,255,1); text-align:center; transition:all 0.1s ease; text-decoration:none; cursor:pointer; font-weight:bold; font-size:1.4rem;}
 
+/* Filter Block Class: TabFilter */
+.Aggregation.TabFilter .AggregationFilter2 fieldset .inputs > div.selected,
 .CardTransparent .item:hover  .linkText a:hover,
 .CardTransparent .item:focus  .linkText a:hover,
 .CardTransparent .item:active .linkText a:hover,
