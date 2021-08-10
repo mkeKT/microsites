@@ -13,4 +13,4 @@ python -m http.server
 ruby -rwebrick -e'WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => Dir.pwd).start'
 ```
 
-The avaiable HTML files can then be viewed at [http://localhost:8000/MKE-Health/](http://localhost:8000/MKE-Health/)
+The available HTML files can then be viewed at [http://localhost:8000/MKE-Health/](http://localhost:8000/MKE-Health/)
